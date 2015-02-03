@@ -146,7 +146,7 @@ sectors.each do |sector|
   valid_companies = sector.companies.select{|c| c.pe_ratio != "N/A"}
   pe_fs = valid_companies.map{|c| c.pe_ratio.to_f}
   average_pe = pe_fs.inject(:+) / pe_fs.size.to_f
-  sector.avg_pe = average_pe
+  sector.avg_pe = average_pe.round(2)
   sector.save
 end
 
