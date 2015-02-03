@@ -1,0 +1,71 @@
+<body id="hello">
+  <div class="container">
+    <div class="row">
+      <% @sectors[0..2].each do |sector| %>
+        <div class="col-lg-4">
+          <div class="panel panel-primary panel-transparent" id="<%= sector.id %>">
+            <div class="panel-heading">
+              <h3><%= sector.name %></h3><br /><p>Average P/E: <%= sector.avg_pe %></p>
+            </div>
+            <div class="panel-body">
+              <% sector.companies.each do |company| %>
+                <%= link_to(company.name, user_sector_company_path(current_user.id, company.sector.id, company.id), html_options = {class: "button"}) %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="row">
+      <% @sectors[3..5].each do |sector| %>
+        <div class="col-lg-4">
+          <div class="panel panel-primary panel-transparent" id="<%= sector.id %>">
+            <div class="panel-heading">
+              <h3><%= sector.name %></h3><br /><p>Average P/E: <%= sector.avg_pe %></p>
+            </div>
+            <div class="panel-body">
+              <% sector.companies.each do |company| %>
+                <%= link_to(company.name, user_sector_company_path(current_user.id, company.sector.id, company.id), html_options = {class: "button"}) %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="row">
+      <% @sectors[6..8].each do |sector| %>
+        <div class="col-lg-4">
+          <div class="panel panel-primary panel-transparent" id="<%= sector.id %>">
+            <div class="panel-heading">
+              <h3><%= sector.name %></h3><br /><p>Average P/E: <%= sector.avg_pe %></p>
+            </div>
+            <div class="panel-body">
+              <% sector.companies.each do |company| %>
+                <%= link_to(company.name, user_sector_company_path(current_user.id, company.sector.id, company.id), html_options = {class: "button"}) %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="row">
+      <% @sectors[9..10].each do |sector| %>
+        <div class="col-lg-4">
+          <div class="panel panel-primary panel-transparent" id="<%= sector.id %>">
+            <div class="panel-heading">
+              <h3><%= sector.name %></h3><br /><p>Average P/E: <%= sector.avg_pe %></p>
+            </div>
+            <div class="panel-body">
+              <% sector.companies.each do |company| %>
+                <%= link_to(company.name, user_sector_company_path(current_user.id, company.sector.id, company.id), html_options = {class: "button"}) %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</body>

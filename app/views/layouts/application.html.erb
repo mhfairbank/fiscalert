@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Fiscalert</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<head><% if current_user %>
+  <%= render "nav" %>
+  <% end %>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:100,100italic,100,500,700' rel='stylesheet' type='text/css'>
+
+  <title>FinancialMetricWatch</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <%= analytics_init if Rails.env.production? %>
 </head>
 <body>
 

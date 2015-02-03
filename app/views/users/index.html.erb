@@ -1,0 +1,21 @@
+<body id="NYC">
+  <div class="header text-right extra-bottom">
+    <% if current_user %>
+      Hey there, <%end %><%= current_user.name %>!
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="well">
+          <div class="title">
+            Your current listeners:
+          </div>
+            <% @listeners.each do |listener| %>
+              <%= link_to(listener.company.name + " Listener", edit_listener_path(listener.id), html_options = {class: "button"}) %><br />
+            <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

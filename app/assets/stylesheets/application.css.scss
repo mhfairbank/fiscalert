@@ -1,0 +1,121 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree ../../../vendor/assets/stylesheets/.
+ *= require_tree .
+ *= require bootstrap-slider
+ *= require_self
+ //= depend_on_asset "nyc.jpg"
+ //= depend_on_asset "nyc2.jpg"
+ //= depend_on_asset "bootstrap/glyphicons-halflings-regular.eot"
+ //= depend_on_asset "bootstrap/glyphicons-halflings-regular.woff"
+ //= depend_on_asset "bootstrap/glyphicons-halflings-regular.ttf"
+ //= depend_on_asset "bootstrap/glyphicons-halflings-regular.svg"
+ */
+
+
+.navbar-brand{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 35px;
+  color: white;
+  text-transform: uppercase;
+  opacity: .9;
+  padding-left: 15%;
+  font-weight: normal;
+}
+
+.navbar-brand .navbar-default{
+  color: white;
+}
+
+.panel-heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 140%;
+  text-align: center;
+}
+
+.panel-heading h3 {
+  font-family: sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+span{
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+/* User sign in and sign forms. */
+.border-form-div {
+  max-width: 300px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.border-form-div .form-signin-heading,
+.border-form-div .checkbox {
+  margin-bottom: 10px;
+}
+.border-form-div input[type="text"],
+.border-form-div input[type="email"],
+.border-form-div input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;
+}
+.border-form-div label, 
+.border-form-div a{
+  color: white;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.border-form-div h2{
+  color: white;
+  font-family: 'Open Sans Condensed', sans-serif;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+#NYC {
+  background-image: image-url('nyc.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 100vh;
+}
+
+.navbar-brand-home{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 5em;
+  text-transform: uppercase;
+  color: white;
+  padding-left: 10%;
+  font-weight: normal;
+}
+
+#hello{
+  background-image: image-url('nyc.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}

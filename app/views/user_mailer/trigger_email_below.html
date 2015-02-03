@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>Dear <%= @user.name %>,</p>
+    <p>
+      One of your FiscAlerts has triggered! <%= @listener.company.name %> now has a P/E ratio of <%= @listener.company.pe_ratio %>, more than <%= @listener.trigger[1..-1] %>% below <%= @listener.company.sector.avg_pe %>, the average for the <%= @listener.company.sector.name %> sector.
+    </p>
+    <p>
+      Happy trading!
+    </p>
+    <p> Sent via Financial Metric Watch.</p>
+  </body>
+</html>

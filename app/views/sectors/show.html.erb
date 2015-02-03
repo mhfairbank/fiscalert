@@ -1,0 +1,3 @@
+<% @sector.companies.each do |company| %>
+  <p><%= link_to(company.name, user_sector_company_path(current_user.id, company.sector.id, company.id)) %></p>
+<% end %>
